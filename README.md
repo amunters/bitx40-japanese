@@ -1,4 +1,4 @@
-# bitx40
+# bitx40 - Japanese text version
 
 BITX40 sketch for Raduino
 
