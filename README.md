@@ -1,4 +1,4 @@
-# bitx40 - Japanese text version
+# bitx40 - Japanese text version by Akira JJ1EPE
 
 BITX40 sketch for Raduino
 
