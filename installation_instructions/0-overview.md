@@ -1,7 +1,7 @@
 ## installation instructions
 ##         OVERVIEW
 
-1. [Install](https://github.com/amunters/bitx40/blob/master/installation_instructions/1-IDE-installation.md) the Arduino IDE
+1. [Install](1-IDE-installation.md) the Arduino IDE
 
 2. [Install](https://github.com/amunters/bitx40/blob/master/library-install.md) the PinChangeInterrupt Library
 
