@@ -152,11 +152,11 @@ The Arduino IDE will be started:
 
 The following message box may appear. Press OK:
 
-![open-sketch2](open_sketch2.png)
+![open-sketch2](jp_open_sketch2.png)
 
 The sketch will now be opened and the program code will be shown in your IDE:
 
-![open-sketch3](open_sketch3.PNG)
+![open-sketch3](jp_open_sketch3.PNG)
 
 ## Compiling the sketch
 
