@@ -64,7 +64,7 @@ A new Arduino icon has been created on your desktop. Double-click it to start th
 
 The IDE software will start:
 
-![IDEinstall8](IDEinstall8.PNG)
+![IDEinstall8](jp_IDEinstall8.PNG)
 
 When it is ready, go to "Tools" => "Board:" => select Arduino Nano:
 
@@ -148,7 +148,7 @@ In the folder "bitx40-master", locate the file "raduino_v1.27.7.ino" and double-
 
 The Arduino IDE will be started:
 
-![open-sketch1a](IDEinstall8.PNG)
+![open-sketch1a](jp_IDEinstall8.PNG)
 
 The following message box may appear. Press OK:
 
