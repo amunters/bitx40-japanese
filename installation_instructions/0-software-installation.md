@@ -66,6 +66,17 @@ The IDE software will start:
 
 ![IDEinstall8](jp_IDEinstall8.PNG)
 
+When the IDE is ready, change the editer language to Japanese.
+Go to "File" => "Preferences":
+
+![change-language](jp-change-language.png)
+
+Set the editer language to Japanese:
+
+![change-language2](jp-change-language2.png)
+
+Close the IDE program and restart it to effectuate the language change.
+
 When it is ready, go to "Tools" => "Board:" => select Arduino Nano:
 
 ![IDEinstall9](IDEinstall9.png)
