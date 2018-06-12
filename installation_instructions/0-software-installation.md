@@ -79,15 +79,15 @@ Close the IDE program and restart it to effectuate the language change.
 
 When it is ready, go to "Tools" => "Board:" => select Arduino Nano:
 
-![IDEinstall9](IDEinstall9.png)
+![IDEinstall9](jp_IDEinstall9.png)
 
 Then go to "Tools" => "Processor:" => select ATmega328P:
 
-![IDEinstall10](IDEinstall10.png)
+![IDEinstall10](jp_IDEinstall10.png)
 
 Then go to "Tools" => "Programmer:" => select AVRISP mkii:
 
-![IDEinstall11](IDEinstall11.png)
+![IDEinstall11](jp_IDEinstall11.png)
 
 ## Installing the PinChangeInterrupt Library
 
