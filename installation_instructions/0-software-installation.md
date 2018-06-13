@@ -191,19 +191,19 @@ The Raduino display will light up because at this time it receives power from th
 
 In the IDE, press the "upload" button:
 
-![upload-sketch1](upload-sketch1.png)
+![upload-sketch1](jp_upload-sketch1.png)
 
 The sketch will first be compiled again, this may take a few minutes:
 
-![upload-sketch1a](compile_sketch2.png)
+![upload-sketch1a](jp_upload-sketch1a.png)
 
 Then the sketch will be uploaded to the Arduino, this will take another minute or so:
 
-![upload-sketch2](upload-sketch2.png)
+![upload-sketch2](jp_upload-sketch2.png)
 
 Uploading is completed:
 
-![upload-sketch3](upload-sketch3.png)
+![upload-sketch3](jp_upload-sketch3.png)
 
 The Raduino will boot up again, the version number of the new firmware will briefly be shown on the display:
 
