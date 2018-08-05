@@ -1,4 +1,4 @@
-## User instructions for Raduino_v1.27
+## User instructions for Raduino_v1.28
 
 **IMPORTANT**: This sketch version requires the library ["PinChangeInterrupt"](https://playground.arduino.cc/Main/PinChangeInterrupt) for interrupt handling. Use your IDE to [install](library-install.md) it before compiling this sketch!
 
@@ -9,6 +9,15 @@ additional functionality provided by this software can be activated by installin
 See the table below showing which mods are required for each function. Details of each mod are described below.
 
 ![Table of hardware modifications](hardware%20modification%20overview.PNG)
+
+## Prevention of out-of-band transmissions
+
+The software restricts transmission to the 40m ham band allocation. By default this is ITU region 2 (Americas: 7000-7300 kHz). If you are located in a different ITU region, uncomment ONE of the lines 44-47 depending on your location, and recompile.
+
+If the [PTTsense-mod](#ptt-sense-wiring) is installed, out-of-band TX will be disabled, but RX is still possible outside the band.
+If the [PTTsense-mod](#ptt-sense-wiring) is NOT installed, both TX as well as RX will be disabled outside the band.
+
+To completely inhibit this feature, uncomment line 47 (define REGION 0) (not normally recommended!).
 
 ## 10-TURN TUNING POT
 
@@ -100,9 +109,9 @@ Connect the 'dah' contact to Raduino pin D3 (connector P3).
 It is recommended to install 1K series resistors to protect the Arduino inputs.
 The built-in keyer provides Iambic mode A and 'bug'-mode (Vibroplex emulation) functionality and the paddles can be reversed.
 
-## ADJUSTING CW KEYER SPEED
+## CW KEYER SPEED CONTROL:
 
-The CW keyer speed can be controlled from the front panel (range 1-50 WPM). While keying, press and release the FB to increase the speed, or the SPOT button to decrease the speed. The CW speed setting is memorized in EEPROM.
+The speed can be controlled from the front panel (range 1-50 WPM). While keying, press and release the FB to increase the speed, or the SPOT button to reduce the speed. The CW speed setting is memorized in EEPROM.
 
 ## CAPACITIVE TOUCH KEYER:
 
@@ -198,7 +207,8 @@ Press the Function Button again to unlock.
 ## SPURIOUS BURST PREVENTION
 
 In order to prevent that a spurious burst is emitted when switching from RX to TX, a short delay (TX_DELAY) is applied.
-By default the TX_DELAY is set to 65 ms. The delay time can be adjusted by editing line 71 as necessary.
+This feature will only work when the [PTTsense-mod](#ptt-sense-wiring) is installed.
+By default the TX_DELAY is set to 65 ms. The delay time can be adjusted by editing line 80 as necessary.
 
 ## FUNCTION BUTTON USAGE:
 
@@ -224,7 +234,7 @@ To enter SETTINGS menu, press and hold the Function Button for a VERY long (>3 s
  
 #### Frequency Scan
 
-1 short press sets frequency SCAN parameters (lower limit, upper limit, step size, step delay)
+1 short press - set frequency SCAN parameters (lower limit, upper limit, step size, step delay)
 
  - using the tuning pot, set the desired lower frequency scan limit
  - press the FB
@@ -262,7 +272,7 @@ To enter SETTINGS menu, press and hold the Function Button for a VERY long (>3 s
     (or ask a friend to transmit a carrier at a known frequency)
   - before going into the calibration mode, first set the VFO to 7100.0 kHz in LSB mode
     (the received signal may not yet be zero beat at this point)
-  - go into the LSB calibration mode (3 short press)
+  - go into the LSB calibration mode (3 short presses)
   - using the tuning pot, adjust the correction value (ppm) for exactly zero beat
   - press the Function Button again to save the setting
 
@@ -315,9 +325,9 @@ To enter SETTINGS menu, press and hold the Function Button for a VERY long (>3 s
     (if the radio is mainly used for CW: a pot span of 10-25 kHz is recommended)
   - press the FB again to save the setting
 
-#### Exit Settings
+#### Exit Settings menu
  
-One long press (>1 second) will exit the SETTINGs menu and return to normal [operating mode](#operating-mode)
+One long press (>1 second) will exit the SETTINGS menu and return to normal [operating mode](#operating-mode)
 
 All user settings are stored in EEPROM and retrieved during startup.
 
@@ -325,7 +335,7 @@ All user settings are stored in EEPROM and retrieved during startup.
 
 To reset all used settings to "factory" values, press and hold the Function button during power on. The factory settings are:
 
-* VFO calibration value: 0
+* VFO calibration value: 180 ppm
 * VFO calibration offset (USB): 1500 Hz
 * VFO drive level (LSB): 4mA
 * VFO drive level (USB): 8mA
